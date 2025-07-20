@@ -9,7 +9,7 @@ const app = express();
 const port = 3001;
 
 // A secret key for signing our tokens.
-const JWT_SECRET = 'your-super-secret-key-that-is-long-and-random';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const startServer = async () => {
   await connectToDatabase();
