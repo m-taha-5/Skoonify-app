@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - Skoonify</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    body {
+      background: url('signup.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: rgba(60, 20, 80, 0.60);
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar .nav-links a.login-btn {
+      background-color: #6a2c70;
+      border: 1px solid #6a2c70;
+    }
+
+    .navbar .nav-links a.login-btn:hover {
+      background-color: #894590;
+    }
+
+    .main-content {
+      height: 100vh;
+      width: 100%;
+      padding-top: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-box {
+      width: 90%;
+      max-width: 1000px;
+      background: rgba(60, 20, 80, 0.75);
+      padding: 40px 60px;
+      border-radius: 15px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .about-box h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .about-box ul {
+      margin-left: 20px;
+      list-style: square;
+    }
+
+    .about-box ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Skoonify</div>
+    <div class="nav-links">
+      <a href="loginpage.html">Login</a>
+      <a href="signup.html" class="login-btn">Signup</a>
+    </div>
+  </nav>
+
+  <!-- About Content -->
+  <div class="main-content">
+    <div class="about-box">
+      <h2>About Skoonify</h2>
+      <p>
+        <strong>Skoonify</strong> is a modern and clean music player web application that delivers a smooth, distraction-free music listening experience. It is designed with simplicity, usability, and aesthetic in mind, using core web technologies like HTML, CSS, and JavaScript.
+      </p>
+
+      <p>
+        This project is developed by <strong>Meraj Ul Abdin (F2022266414)</strong> and <strong>Haroon Shah Nawaz (F2022266414)</strong> as a part of their <strong>Term Project for the Advanced Web Technologies course</strong> at the University of Management and Technology (UMT).
+      </p>
+
+      <p>
+        The project is completed under the supervision of <strong>Sir Shahbaz Ali</strong>, and also serves as a real-world development experience during our internship with <strong>Devs-in Developers</strong>.
+      </p>
+
+      <h3>🎯 Key Highlights</h3>
+      <ul>
+        <li>Fully responsive and visually appealing UI</li>
+        <li>Seamless song playback and navigation</li>
+        <li>Developed using HTML, CSS, and Vanilla JavaScript</li>
+        <li>Expandable architecture for future enhancements</li>
+      </ul>
+
+      <p>
+        The purpose of this project is both academic and practical — bridging classroom learning with real development practices in the tech industry.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

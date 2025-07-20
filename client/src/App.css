@@ -1,0 +1,600 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('signup.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: rgba(60, 20, 80, 0.60);
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar .nav-links a.login-btn {
+      background-color: #6a2c70;
+      border: 1px solid #6a2c70;
+    }
+
+    .navbar .nav-links a.login-btn:hover {
+      background-color: #894590;
+    }
+
+    /* Main container */
+    /* .main-content {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 60px;
+    } */
+
+    /* This rule controls the positioning of the main content area for login, signup, and about pages */
+.main-content {
+  /* Use Flexbox to enable easy centering */
+  display: flex;
+  
+  /* Center the content horizontally */
+  justify-content: center;
+  
+  /* Center the content vertically */
+  align-items: center;
+
+  /* Make the container at least as tall as the entire screen */
+  min-height: 100vh;
+  
+  /* Add some padding to prevent content from touching the edges, especially the top navbar */
+  padding: 80px 20px 20px 20px;
+
+  /* This is important! It makes sure the padding is included inside the 100vh height, not added to it */
+  box-sizing: border-box;
+}
+
+    .login-box {
+      width: 90%;
+      max-width: 450px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      font-size: 16px;
+    }
+
+    .login-box input::placeholder {
+      color: #ccc;
+    }
+
+    .login-box button {
+      background: #b83b5e;
+      color: white;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #dd5a7d;
+    }
+
+    .login-box .nav-links {
+      margin-top: 20px;
+    }
+
+    .login-box .nav-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 14px;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .login-box .nav-links a:hover {
+      color: #f0c0ff;
+    }
+
+
+
+
+    
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+
+
+
+body {
+  background-image: url('signup.gif');
+  background-repeat: no-repeat;        /* ✅ Prevents image from repeating */
+  background-size: cover;              /* ✅ Stretches image to cover entire screen */
+  background-position: center center;  /* ✅ Keeps the image centered */
+  height: 100vh;                       /* ✅ Ensures body takes full viewport height */
+  margin: 0;  
+   overflow: hidden ;                         /* ✅ Removes default margin */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* nav{
+    
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+nav ul{ 
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 60px;
+    background-color: black;
+    color: White;
+}
+
+nav ul li{
+    padding: 0px 12px;
+} */
+
+/* Consistent Modern Navbar Theme */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(60, 20, 80, 0.60); /* purple glass effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  z-index: 999;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.navbar .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .nav-home {
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-home:hover {
+  color: #ffb3ec;
+}
+
+.search-input {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  outline: none;
+  width: 200px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
+.search-input:focus {
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Optional - Padding top to push content below navbar */
+body {
+  padding-top: 70px; 
+}
+
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.brand img{
+    width:58px ;
+
+
+}
+.container{
+    min-height: 60vh;
+    background-color: black;
+    color: white;
+    font-family: 'varela round',sans-serif;
+    display: flex;
+    margin: 20px auto;
+    width: 75%;
+    border-radius: 12px;
+    padding: 34px;
+    /* background-image: url('bgg.jpg')  ; */
+     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bgg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+background-position: center;
+opacity: 0.80;
+
+}
+
+#myprogressbar{
+    min-width: 80vw;
+    cursor: pointer;
+}
+
+.bottom{
+    width: 100%;
+    position: sticky;
+    height: 90px;
+    background-color: black;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.icons{
+    margin-top: 10px ;
+ padding: 0px 20px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+
+/* .naatitem{
+height: 35px;
+display: flex;
+background-color: white;
+width: 70%;
+color:black;
+margin: 12px 0px;
+justify-content: space-between;
+border-radius: 11px;
+margin-top: 24px;
+}
+
+.naatItem img{
+ width: 30px;
+ margin: 0px 23 px ;
+ border-radius: 27px;
+
+} */
+
+.naatlist h1 {
+    margin-left: 37px;
+    color: rgb(255 255 255);
+    margin-bottom: 10px;
+}
+
+.naatitem {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  max-width: 550px;
+  color: black;
+  margin: 6px 0px;
+  padding: 0 12px;
+  border-radius: 11px;
+  justify-content: space-between;
+  
+}
+
+.naatitem img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover;
+  margin-right: 17px;
+}
+
+
+
+.naatplaylist {
+  display: flex;
+  align-items: center;
+}
+
+.timestamp {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.timestamp i {
+  margin-left: 6px;
+  color: black;
+  cursor: pointer;
+}
+
+
+.naatlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+.naatinfo{
+    color: white;
+    position: absolute;
+    left: 10vw;
+}
+
+.naatinfo img{
+    margin-top: 14px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in ;
+}
+
+.logout-button {
+  margin: 0 15px;
+  padding: 8px 16px;
+  background-color: #7f5af0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #5c3bd0;
+}
+
+
+
+/* === STYLES FOR THE ABOUT PAGE === */
+
+.about-box {
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(60, 20, 80, 0.75);
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.about-box h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-box p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-box ul {
+  margin-left: 20px;
+  list-style: square;
+}
+
+.about-box ul li {
+  margin-bottom: 10px;
+}
+
+
+
+.logout-button {
+  margin-left: 15px; /* Only add space to the left */
+  padding: 8px 16px;
+  background-color: #7f5af0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  /* Ensure it behaves like a button */
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #5c3bd0;
+}
+
+
+
+
+
+
+
+
+/* adding for resposivness */
+/* ================================================== */
+/* 6. RESPONSIVE STYLES (MEDIA QUERIES) */
+/* ================================================== */
+
+/* --- For Tablets and Smaller Desktops (less than 850px wide) --- */
+@media screen and (max-width: 850px) {
+  
+  /* Make the main player container stack vertically */
+  .container {
+    flex-direction: column;
+    width: 90%; /* Take up more width on smaller screens */
+  }
+
+  /* Make the song list and banner take up full width when stacked */
+  .naatlist, .banner {
+    width: 100%;
+  }
+
+  .banner {
+    margin-top: 20px;
+    min-height: 200px; /* Give the banner a minimum height */
+  }
+
+  /* Adjust About Box for smaller screens */
+  .about-box {
+    padding: 30px;
+  }
+}
+
+
+/* --- For Mobile Phones (less than 600px wide) --- */
+@media screen and (max-width: 600px) {
+
+  /* Make the overall font size slightly smaller */
+  body {
+    padding-top: 70px; /* Adjust padding for a slightly smaller navbar */
+  }
+
+  /* --- Navbar Tweaks for Mobile --- */
+  .navbar {
+    padding: 10px 5%;
+  }
+
+  .navbar .logo span {
+    display: none; /* Hide the word "Skoonify" to save space */
+  }
+
+  .navbar .logo img {
+    height: 35px; /* Make logo smaller */
+    width: 35px;
+  }
+
+  .logout-button, .nav-home {
+    padding: 6px 10px; /* Make buttons smaller */
+    font-size: 0.9rem;
+  }
+
+  /* --- Auth & About Box Tweaks for Mobile --- */
+  .login-box, .about-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .login-box h2, .about-box h2 {
+    font-size: 24px;
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+
+  /* --- Player Page Tweaks for Mobile --- */
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  /* Hide the banner completely on very small screens to focus on the playlist */
+  .banner {
+    display: none;
+  }
+
+  .bottom {
+    height: 120px; /* Give a bit more space for controls */
+  }
+
+  .naatinfo {
+    /* Hide the song info on small screens to prevent overlap */
+    display: none;
+  }
+}
